@@ -1,0 +1,12 @@
+[Unit]
+Description = tippy app
+
+[Service]
+ExecStart = /usr/local/bin/gunicorn app:app -c /home/pi/tippy/guniconf.py
+ExecStop=/bin/kill -SIGTERM $MAINPID
+Restart = always
+WorkingDirectory=/home/pi/tippy
+Type = simple
+
+[Install]
+WantedBy=multi-user.target

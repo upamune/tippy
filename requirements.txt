@@ -1,0 +1,8 @@
+flask
+flask_admin
+flask_sqlalchemy
+requests
+sqlalchemy
+gunicorn
+scapy-python3
+schedule

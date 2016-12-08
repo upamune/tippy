@@ -1,0 +1,11 @@
+[Unit]
+Description = tippy arp 
+
+[Service]
+ExecStart = /usr/bin/python3 /home/pi/tippy/mac.py
+ExecStop=/bin/kill -SIGTERM $MAINPID
+WorkingDirectory=/home/pi/tippy
+Type = simple
+
+[Install]
+WantedBy=multi-user.target
